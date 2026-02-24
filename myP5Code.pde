@@ -6,11 +6,14 @@ setup = function(){
 
 //draw Function - will run repeatedly
 draw = function() {
+  noStroke()
     ellipse(mouseX, mouseY, 20, 20);
 
   //***in the video they use if(mouseIsPressed)
   //***in github we use if(mousePressed)
-
+ if(mousePressed){ 
+      ellipse(position, mouseY, 50, 50)
+     }
   funWithKeys();
 };
 
@@ -22,6 +25,7 @@ var funWithKeys = function(){
     if(key == 'g'){fill(0,randomIntensity,0);}
     if(key == 'w'){fill(255,255,255);}
     if(key == 'c'){background(255,255,255,150);}
+   if(key == 'b'){background(66, 135, 245);}
   }
 };
 
